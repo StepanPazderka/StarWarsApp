@@ -1,0 +1,44 @@
+
+{
+  "schemaNamespace" : "swapi",
+  "input" : {
+    "operationSearchPaths" : [
+      "graphql/queries.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "graphql/schema.graphql"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./swapi",
+      "moduleType" : {
+        "swiftPackageManager" : {
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  },
+  "schemaDownloadConfiguration": {
+    "downloadMethod": {
+        "introspection": {
+            "endpointURL": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+            "httpMethod": {
+                "POST": {}
+            },
+            "includeDeprecatedInputValues": false,
+            "outputFormat": "SDL"
+        }
+    },
+    "downloadTimeout": 60,
+    "headers": [],
+    "outputPath": "./graphql/schema.graphql"
+  }
+}

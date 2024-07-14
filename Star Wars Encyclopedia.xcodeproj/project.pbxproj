@@ -3,23 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F7D5AD72C3E160D00255BD0 /* Star_Wars_EncyclopediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D5AD62C3E160D00255BD0 /* Star_Wars_EncyclopediaApp.swift */; };
+		7F7D5AD72C3E160D00255BD0 /* StarWarsEncyclopediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D5AD62C3E160D00255BD0 /* StarWarsEncyclopediaApp.swift */; };
 		7F7D5AD92C3E160D00255BD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7D5AD82C3E160D00255BD0 /* ContentView.swift */; };
 		7F7D5ADB2C3E160E00255BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7D5ADA2C3E160E00255BD0 /* Assets.xcassets */; };
 		7F7D5ADF2C3E160E00255BD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7D5ADE2C3E160E00255BD0 /* Preview Assets.xcassets */; };
+		7F7D5AE72C3E169800255BD0 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 7F7D5AE62C3E169800255BD0 /* Apollo */; };
+		7FF8B7492C42A00F00A4BEBB /* schema.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7FF8B7482C42A00F00A4BEBB /* schema.graphql */; };
+		7FF8B74B2C42A04C00A4BEBB /* queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7FF8B74A2C42A04C00A4BEBB /* queries.graphql */; };
+		7FF8B7512C42E60A00A4BEBB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8B7502C42E60A00A4BEBB /* Network.swift */; };
+		7FF8B7542C42E80400A4BEBB /* Swapi in Frameworks */ = {isa = PBXBuildFile; productRef = 7FF8B7532C42E80400A4BEBB /* Swapi */; };
+		7FF8B7592C4343DE00A4BEBB /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8B7582C4343DE00A4BEBB /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F7D5AD32C3E160D00255BD0 /* Star Wars Encyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Wars Encyclopedia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F7D5AD62C3E160D00255BD0 /* Star_Wars_EncyclopediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Wars_EncyclopediaApp.swift; sourceTree = "<group>"; };
+		7F7D5AD62C3E160D00255BD0 /* StarWarsEncyclopediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsEncyclopediaApp.swift; sourceTree = "<group>"; };
 		7F7D5AD82C3E160D00255BD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F7D5ADA2C3E160E00255BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F7D5ADC2C3E160E00255BD0 /* Star_Wars_Encyclopedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Star_Wars_Encyclopedia.entitlements; sourceTree = "<group>"; };
 		7F7D5ADE2C3E160E00255BD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FF8B7482C42A00F00A4BEBB /* schema.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphql; sourceTree = "<group>"; };
+		7FF8B74A2C42A04C00A4BEBB /* queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queries.graphql; sourceTree = "<group>"; };
+		7FF8B7502C42E60A00A4BEBB /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7FF8B7582C4343DE00A4BEBB /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF8B7542C42E80400A4BEBB /* Swapi in Frameworks */,
+				7F7D5AE72C3E169800255BD0 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +48,7 @@
 		7F7D5ACA2C3E160D00255BD0 = {
 			isa = PBXGroup;
 			children = (
+				7FDE3C422C41884100E57516 /* graphql */,
 				7F7D5AD52C3E160D00255BD0 /* Star Wars Encyclopedia */,
 				7F7D5AD42C3E160D00255BD0 /* Products */,
 			);
@@ -52,11 +65,13 @@
 		7F7D5AD52C3E160D00255BD0 /* Star Wars Encyclopedia */ = {
 			isa = PBXGroup;
 			children = (
-				7F7D5AD62C3E160D00255BD0 /* Star_Wars_EncyclopediaApp.swift */,
+				7F7D5AD62C3E160D00255BD0 /* StarWarsEncyclopediaApp.swift */,
 				7F7D5AD82C3E160D00255BD0 /* ContentView.swift */,
 				7F7D5ADA2C3E160E00255BD0 /* Assets.xcassets */,
 				7F7D5ADC2C3E160E00255BD0 /* Star_Wars_Encyclopedia.entitlements */,
 				7F7D5ADD2C3E160E00255BD0 /* Preview Content */,
+				7FF8B7502C42E60A00A4BEBB /* Network.swift */,
+				7FF8B7582C4343DE00A4BEBB /* MovieDetailView.swift */,
 			);
 			path = "Star Wars Encyclopedia";
 			sourceTree = "<group>";
@@ -67,6 +82,15 @@
 				7F7D5ADE2C3E160E00255BD0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FDE3C422C41884100E57516 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				7FF8B7482C42A00F00A4BEBB /* schema.graphql */,
+				7FF8B74A2C42A04C00A4BEBB /* queries.graphql */,
+			);
+			path = graphql;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +109,10 @@
 			dependencies = (
 			);
 			name = "Star Wars Encyclopedia";
+			packageProductDependencies = (
+				7F7D5AE62C3E169800255BD0 /* Apollo */,
+				7FF8B7532C42E80400A4BEBB /* Swapi */,
+			);
 			productName = "Star Wars Encyclopedia";
 			productReference = 7F7D5AD32C3E160D00255BD0 /* Star Wars Encyclopedia.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +141,10 @@
 				Base,
 			);
 			mainGroup = 7F7D5ACA2C3E160D00255BD0;
+			packageReferences = (
+				7F7D5AE52C3E169800255BD0 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				7FF8B7522C42E80400A4BEBB /* XCLocalSwiftPackageReference "swapi" */,
+			);
 			productRefGroup = 7F7D5AD42C3E160D00255BD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7D5ADF2C3E160E00255BD0 /* Preview Assets.xcassets in Resources */,
+				7FF8B7492C42A00F00A4BEBB /* schema.graphql in Resources */,
+				7FF8B74B2C42A04C00A4BEBB /* queries.graphql in Resources */,
 				7F7D5ADB2C3E160E00255BD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7D5AD92C3E160D00255BD0 /* ContentView.swift in Sources */,
-				7F7D5AD72C3E160D00255BD0 /* Star_Wars_EncyclopediaApp.swift in Sources */,
+				7F7D5AD72C3E160D00255BD0 /* StarWarsEncyclopediaApp.swift in Sources */,
+				7FF8B7512C42E60A00A4BEBB /* Network.swift in Sources */,
+				7FF8B7592C4343DE00A4BEBB /* MovieDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +395,36 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7FF8B7522C42E80400A4BEBB /* XCLocalSwiftPackageReference "swapi" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = swapi;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F7D5AE52C3E169800255BD0 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F7D5AE62C3E169800255BD0 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F7D5AE52C3E169800255BD0 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		7FF8B7532C42E80400A4BEBB /* Swapi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Swapi;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F7D5ACB2C3E160D00255BD0 /* Project object */;
 }

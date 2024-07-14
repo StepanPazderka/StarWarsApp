@@ -1,0 +1,12 @@
+
+query FetchFilms {
+  allFilms {
+    films {
+      title
+      director
+      releaseDate
+      id
+      episodeID
+    }
+  }
+}
