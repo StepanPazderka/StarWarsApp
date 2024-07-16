@@ -13,6 +13,17 @@ struct MovieDetailView: View {
 	let film: FetchFilmsQuery.Data.AllFilms.Film
 	@State var releaseDate: Date?
 	
+	init(film: FetchFilmsQuery.Data.AllFilms.Film) {
+		self.film = film
+		
+		let inputDateFormatter = DateFormatter()
+		inputDateFormatter.dateFormat = "yyyy-MM-dd"
+		
+		guard let releaseDate = film.releaseDate else { return }
+		let date = inputDateFormatter.date(from: releaseDate)
+		self._releaseDate = State(wrappedValue: date)
+	}
+	
 	var body: some View {
 		VStack(alignment: .leading) {
 			Text(film.title ?? "")
@@ -29,13 +40,6 @@ struct MovieDetailView: View {
 		}
 		.containerRelativeFrame(.horizontal)
 		.padding(20)
-		.onAppear {
-			let inputDateFormatter = DateFormatter()
-			inputDateFormatter.dateFormat = "yyyy-MM-dd"
-			
-			guard let releaseDate = film.releaseDate else { return }
-			self.releaseDate = inputDateFormatter.date(from: releaseDate)
-		}
     }
 }
 
